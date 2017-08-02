@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SVProgressHUD
 
 class ViewController: UIViewController {
 
@@ -46,6 +47,14 @@ class ViewController: UIViewController {
     @IBAction func clear(){
         number = 0
         label.text = String(number)
+    }
+    
+    @IBAction func showHUD(){
+        SVProgressHUD.showProgress(0.2,status: "ロード中")
+    }
+    
+    @IBAction func dismissHUD(){
+        SVProgressHUD.dismiss()
     }
 
     /*
